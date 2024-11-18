@@ -1,4 +1,4 @@
-import { capitalize } from './testing-practice';
+import { capitalize, reverseString } from './testing-practice';
 
 describe('The capitalize() method', () => {
     test('capitalize: test', () => {
@@ -17,3 +17,9 @@ describe('The capitalize() method', () => {
         expect(capitalize(null)).toBe(null);
     });
 });
+
+describe('The reverseString() method', () => {
+    test('reverse: pedal', () => {
+        expect(reverseString('pedal')).toBe('ladep');
+    })
+})
