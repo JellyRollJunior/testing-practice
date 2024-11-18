@@ -1,4 +1,9 @@
-import { capitalize, reverseString, calculator } from './testing-practice';
+import {
+    capitalize,
+    reverseString,
+    calculator,
+    caesarCipher,
+} from './testing-practice';
 
 describe('The capitalize() method', () => {
     test('capitalize: test', () => {
@@ -37,15 +42,33 @@ describe('The calculator object', () => {
     test('subtract', () => {
         const calc = calculator();
         expect(calc.subtract(1, 1)).toBe(0);
-    })
+    });
 
     test('divide', () => {
         const calc = calculator();
         expect(calc.divide(6, 3)).toBe(2);
-    })
+    });
 
     test('multiply', () => {
         const calc = calculator();
         expect(calc.multiply(3, 3)).toBe(9);
-    })
+    });
+});
+
+describe('The caesarCipher() function', () => {
+    test('Lowercase', () => {
+        expect(caesarCipher('abc', 3)).toBe('def');
+    });
+
+    test('lowercase wrap around', () => {
+        expect(caesarCipher('xyz', 3)).toBe('abc');
+    });
+
+    test('Uppercase', () => {
+        expect(caesarCipher('XYZ', 3)).toBe('ABC');
+    });
+
+    test('Uppercase and Lowercase', () => {
+        expect(caesarCipher('XYZabc', 3)).toBe('ABCdef');
+    });
 });
