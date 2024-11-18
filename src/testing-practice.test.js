@@ -3,6 +3,7 @@ import {
     reverseString,
     calculator,
     caesarCipher,
+    analyzeArray
 } from './testing-practice';
 
 describe('The capitalize() method', () => {
@@ -60,7 +61,7 @@ describe('The caesarCipher() function', () => {
         expect(caesarCipher('abc', 3)).toBe('def');
     });
 
-    test('lowercase wrap around', () => {
+    test('Lowercase wrap around', () => {
         expect(caesarCipher('xyz', 3)).toBe('abc');
     });
 
@@ -70,5 +71,43 @@ describe('The caesarCipher() function', () => {
 
     test('Uppercase and Lowercase', () => {
         expect(caesarCipher('XYZabc', 3)).toBe('ABCdef');
+    });
+});
+
+describe('The analyzeArray() function', () => {
+    test('Positive values', () => {
+        expect(analyzeArray([1, 8, 3, 4, 2, 6])).toStrictEqual({
+            average: 4,
+            min: 1,
+            max: 8,
+            length: 6,
+        });
+    });
+
+    test('Negative values', () => {
+        expect(analyzeArray([-1, -8, -3, -4, -2, -6])).toStrictEqual({
+            average: -4,
+            min: -8,
+            max: -1,
+            length: 6,
+        });
+    });
+
+    test('Empty array', () => {
+        expect(analyzeArray([])).toStrictEqual({
+            average: 0,
+            min: 0,
+            max: 0,
+            length: 0,
+        });
+    });
+
+    test('Null array', () => {
+        expect(analyzeArray(null)).toStrictEqual({
+            average: 0,
+            min: 0,
+            max: 0,
+            length: 0,
+        });
     });
 });

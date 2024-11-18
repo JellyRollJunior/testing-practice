@@ -1,4 +1,4 @@
-export { capitalize, reverseString, calculator, caesarCipher };
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray };
 
 const capitalize = (string) => {
     if (string == '') return string;
@@ -46,4 +46,26 @@ const caesarCipherShift = (start, end, value, shiftFactor) => {
         cipher += start;
     }
     return cipher;
+};
+
+const analyzeArray = (array) => {
+    if (array == null || array.length == 0) {
+        return {
+            average: 0,
+            min: 0,
+            max: 0,
+            length: 0,
+        };
+    }
+    let average = 0;
+    let min = array[0];
+    let max = array[0];
+    const length = array.length;
+    for (const value of array) {
+        min = Math.min(min, value);
+        max = Math.max(max, value);
+        average += value;
+    }
+    average = average / length;
+    return { average, min, max, length };
 };
