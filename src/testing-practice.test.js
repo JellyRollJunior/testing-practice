@@ -22,4 +22,8 @@ describe('The reverseString() method', () => {
     test('reverse: pedal', () => {
         expect(reverseString('pedal')).toBe('ladep');
     })
+
+    test('reverse: reverse', () => {
+        expect(reverseString('reverse')).toBe('esrever');
+    })
 })

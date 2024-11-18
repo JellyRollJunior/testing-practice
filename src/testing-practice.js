@@ -7,5 +7,5 @@ const capitalize = (string) => {
 };
 
 const reverseString = (string) => {
-    return 'ladep';
+    return string.split("").reverse().join("");
 }
