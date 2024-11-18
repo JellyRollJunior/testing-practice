@@ -38,4 +38,14 @@ describe('The calculator object', () => {
         const calc = calculator();
         expect(calc.subtract(1, 1)).toBe(0);
     })
+
+    test('divide', () => {
+        const calc = calculator();
+        expect(calc.divide(6, 3)).toBe(2);
+    })
+
+    test('multiply', () => {
+        const calc = calculator();
+        expect(calc.multiply(3, 3)).toBe(9);
+    })
 });
