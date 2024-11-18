@@ -1,17 +1,19 @@
-import { capitalize } from "./testing-practice"
+import { capitalize } from './testing-practice';
 
-test('capitalize: test', () => {
-    expect(capitalize('test')).toBe('Test');
-})
+describe('The capitalize() method', () => {
+    test('capitalize: test', () => {
+        expect(capitalize('test')).toBe('Test');
+    });
 
-test('capitalize: a', () => {
-    expect(capitalize('a')).toBe('A');
-})
+    test('capitalize: a', () => {
+        expect(capitalize('a')).toBe('A');
+    });
 
-test('capitalize: empty string', () => {
-    expect(capitalize('')).toBe('');
-})
+    test('capitalize: empty string', () => {
+        expect(capitalize('')).toBe('');
+    });
 
-test('capitalize: null', () => {
-    expect(capitalize(null)).toBe(null);
-})
+    test('capitalize: null', () => {
+        expect(capitalize(null)).toBe(null);
+    });
+});
