@@ -1,4 +1,4 @@
-export { capitalize, reverseString };
+export { capitalize, reverseString, calculator };
 
 const capitalize = (string) => {
     if (string == '') return string;
@@ -7,5 +7,11 @@ const capitalize = (string) => {
 };
 
 const reverseString = (string) => {
-    return string.split("").reverse().join("");
-}
+    return string.split('').reverse().join('');
+};
+
+const calculator = () => {
+    const add = (a, b) => a + b;
+
+    return { add };
+};

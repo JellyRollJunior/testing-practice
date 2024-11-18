@@ -1,4 +1,4 @@
-import { capitalize, reverseString } from './testing-practice';
+import { capitalize, reverseString, calculator } from './testing-practice';
 
 describe('The capitalize() method', () => {
     test('capitalize: test', () => {
@@ -21,9 +21,16 @@ describe('The capitalize() method', () => {
 describe('The reverseString() method', () => {
     test('reverse: pedal', () => {
         expect(reverseString('pedal')).toBe('ladep');
-    })
+    });
 
     test('reverse: reverse', () => {
         expect(reverseString('reverse')).toBe('esrever');
-    })
-})
+    });
+});
+
+describe('The calculator object', () => {
+    test('Addition', () => {
+        const calc = calculator();
+        expect(calc.add(1, 1)).toBe(2);
+    });
+});
