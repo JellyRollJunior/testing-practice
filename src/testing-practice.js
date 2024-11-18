@@ -13,5 +13,7 @@ const reverseString = (string) => {
 const calculator = () => {
     const add = (a, b) => a + b;
 
-    return { add };
+    const subtract = (a, b) => a - b;
+
+    return { add, subtract };
 };
