@@ -1,12 +1,8 @@
-## node-webpack-template
+## Testing practice
+- [Lesson link](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice)
 
-- Contains:
-  - webpack
-  - webpack cli
-  - html webpack plugin
-  - html loader
-  - webpack dev server
-  - webpack merge
-  - node scripts: run, dev, deploy
-  - eslint
-  - prettier
+## Learning Outcomes
+- First time practicing TDD
+- I can see the benefits
+  - Increased code confidence
+  - Increased focus (won't jump from one fix to another or one detail to another)
